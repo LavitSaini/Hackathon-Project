@@ -1,0 +1,86 @@
+body {
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+.owl-carousel {
+  direction: ltr;
+}
+
+.owl-carousel .owl-nav,
+.owl-carousel .owl-dots,
+.owl-carousel .owl-item {
+  direction: rtl;
+}
+
+.contact__input-box .bootstrap-select .dropdown-menu,
+.bootstrap-select .dropdown-toggle .filter-option {
+  text-align: right;
+}
+
+.list-unstyled {
+  padding-right: 0;
+}
+
+.topbar-one__info {
+  padding-right: 37px;
+}
+
+.main-slider-one .agrofa-btn--base {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.feature-one__item-bg {
+  background-image: url("../images/shapes/feature1-right.png"), url("../images/shapes/feature1-left.png");
+  background-position: bottom -48px right -60px, bottom 0px left -8px;
+}
+
+.food-one::after {
+  background-image: url("../images/shapes/food-bg-rtl1-1.png");
+}
+
+.our-team-one__img img {
+  border-radius: 94px 94px 94px 0px !important;
+}
+
+.our-team-one__info-bx {
+  border-radius: 0px 55px 55px 55px;
+}
+
+.latest-work-one .latest-work--btn .latest-work-btn--arrow,
+.footer-widget__info li::before,
+.footer-widget__info .food-one--two .food-one__quality-list li::before,
+.food-one--two .food-one__quality-list .footer-widget__info li::before,
+.footer-widget__links li::before,
+.footer-widget__links .food-one--two .food-one__quality-list li::before,
+.food-one--two .food-one__quality-list .footer-widget__links li::before {
+  transform: rotate(180deg);
+}
+
+.latest-work-one__carousel {
+  padding-left: 0;
+}
+.latest-work-one__carousel .owl-stage-outer {
+  padding-left: 0;
+}
+
+.latest-work-one .latest-work--btn {
+  flex-direction: row-reverse;
+}
+
+.latest-work-one .latest-work--btn .latest-work-btn--arrow {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+@keyframes cloudMove {
+  0% {
+    background-position: 1920px -100%;
+  }
+  100% {
+    background-position: 0 -100%;
+  }
+}
+
+/*# sourceMappingURL=agrofa-custom-rtl.css.map */

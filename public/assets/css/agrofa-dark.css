@@ -1,0 +1,331 @@
+:root {
+  --agrofa-text: #12110e;
+  --agrofa-text-rgb: 18, 17, 14;
+  --agrofa-white: #083314;
+  --agrofa-white-rgb: 8, 51, 20;
+  --agrofa-base: #c2a74e;
+  --agrofa-base-rgb: 194, 167, 78;
+  --agrofa-black: #fff;
+  --agrofa-black-rgb: 255, 255, 255;
+  --agrofa-black3: #000;
+  --agrofa-black3-rgb: 0, 0, 0;
+  --agrofa-black4: #121013;
+  --agrofa-black4-rgb: 18, 16, 19;
+  --agrofa-gray: #1c1a1d;
+  --agrofa-gray-rgb: 28, 26, 29;
+  --agrofa-border-color: #2f2d30;
+  --agrofa-border-color-rgb: 47, 45, 48;
+}
+
+.topbar-one__social {
+  border-color: #11441f;
+}
+
+.topbar-one--two .topbar-one__info__icon {
+  background-color: var(--agrofa-green);
+  color: var(--agrofa-black);
+}
+
+.topbar-one--two .topbar-one__support--text {
+  color: #688771;
+}
+
+.owl-nav button,
+.main-slider-two__carousel.owl-carousel .owl-nav button,
+.topbar-one__support a {
+  color: #fefefe;
+}
+
+.main-slider-two__carousel.owl-carousel .owl-nav button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.topbar-one__info__item {
+  border-left-color: #11441f;
+}
+
+.topbar-one--two .topbar-one__right {
+  background-color: #164423;
+}
+
+.eco-services-one .eco-services-one--btn:hover,
+.eco-services-one .eco-services-one--btn:hover span,
+.main-slider-two__title,
+.main-slider-two__info-text,
+.main-header--two .main-header__cart,
+.main-header--two .main-header__search,
+.topbar-one__right-text,
+.food-chose-title,
+.feature-one--two .feature-one__icon,
+.feature-one__title,
+.choose-feature-two__info-title,
+.choose-feature-two .choose-feature-two-btn,
+.about-two__icon,
+.about-two__quality-title,
+.food-chose-title,
+.why-choose-one--two .why-choose-one__title,
+.why-choose-one__name,
+.why-choose-one--two .why-choose-one__name,
+.why-choose-one--two .why-choose-one__read-btn,
+.why-choose-one__read-btn,
+.why-choose-one__icon,
+.food-one__quality-title,
+.team-skills-one--two .team-skills-one__customers__icon-cricle,
+.team-skills-one__customers__icon-cricle,
+.team-skills-one__customers__cricle span,
+.eco-services-one__title,
+.about-two__text,
+.home-showcase .demo-one__title,
+.choose-feature-two__cricle:hover .choose-feature-two__icon {
+  color: var(--agrofa-black);
+}
+
+.main-header__inner {
+  background-color: #021b09;
+}
+
+.main-header--two .main-menu .main-menu__list > li > a {
+  color: var(--agrofa-black);
+  text-shadow: 0px 0px 0px var(--agrofa-black);
+}
+
+.main-slider-two {
+  margin-top: -80px;
+}
+
+.main-header--two .main-header__keyword {
+  color: #5f7e68;
+}
+
+.main-slider-two__btn > .agrofa-btn--base::before,
+.main-slider-two__btn > .agrofa-btn--base::after,
+.main-header--two .main-header__btn::before,
+.main-header--two .main-header__btn::after {
+  background-color: var(--agrofa-black);
+}
+
+.feature-one--two {
+  background-color: #010e06;
+}
+
+.feature-one__item-bg {
+  box-shadow: none;
+  background-image: url("../images/shapes/dark-feature1-left.png"), url("../images/shapes/dark-feature1-right.png");
+}
+
+.why-choose-one--two {
+  background-color: #002c11;
+  background-image: url("../images/backgrounds/offer-bg3-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-blend-mode: overlay;
+}
+
+.choose-feature-two .choose-feature-two-btn:hover {
+  color: var(--agrofa-text);
+}
+
+.about-two {
+  background-color: #040804;
+  margin-top: -186px;
+  padding-top: 182px;
+}
+
+.about-two::before {
+  top: initial;
+  bottom: 0;
+  background-image: url("../images/shapes/dark-about-effect2-1-.png");
+}
+
+.about-two::after {
+  top: 259px;
+  right: -85px;
+  bottom: initial;
+}
+
+.about-two__effect-bg {
+  padding-top: 260px;
+}
+
+.about-two__effect-bg > img {
+  max-height: 826px;
+  object-fit: contain;
+}
+
+.about-two__quality-list > li,
+.food-one__quality-list > li,
+.about-two__quality-info,
+.team-skills-one--two .team-skills-one__col-text,
+.team-skills-one__col-text,
+.food-one__quality-info {
+  color: #4e5a53;
+}
+
+.about-two__col {
+  border-color: #171e17;
+}
+
+.why-choose-one__descript {
+  color: var(--agrofa-green4);
+}
+
+.team-skills-one--two {
+  background-color: #021208;
+  background-image: url("../images/backgrounds/dark-bg1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.team-skills-one--two .team-skills-one__right-image__bg::after {
+  background-image: url("../images/shapes/dark-bg1-1.png");
+}
+
+.work-learn-one--two::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 122px;
+  background-color: #0b1910;
+  z-index: 1;
+}
+
+.work-learn-one--two__inner-bg {
+  z-index: 2;
+}
+
+.work-learn-one__col::after,
+.work-learn-one__inner-img,
+.testimonials-two--card__icon-qoute,
+.opening__info-row__icon,
+.opening--two__col,
+.why-choose-one .why-choose-more--btn {
+  border-color: var(--agrofa-black);
+}
+
+.work-learn-one__work-title,
+.latest-work-one__work-title,
+.testimonials-two--card__name,
+.testimonials-two--card__icon-qoute,
+.opening__info-row__icon,
+.footer-widget__title,
+.footer-widget__experience-text,
+.footer-widget__mail-icon,
+.footer-widget__post-heading,
+.main-footer__copyright,
+.main-footer__social-row-text,
+.why-choose-one .why-choose-more--btn,
+.mobile-nav__content .main-menu__list li > a,
+.mobile-nav__contact li,
+.mobile-nav__social a,
+.mobile-nav__close,
+.main-menu .main-menu__list li ul li > a,
+.footer-widget__info li a:hover,
+.footer-widget__links li a:hover {
+  color: var(--agrofa-black);
+}
+
+.latest-work-one--two {
+  background-color: #0b1910;
+}
+
+.latest-work-one--two::after {
+  content: none;
+}
+
+.latest-work-one--two::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: transparent;
+  background-image: url("../images/shapes/dark-bg1-2.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.latest-work-one--two .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+.latest-work-one .latest-work--btn::before,
+.latest-work-one .latest-work--btn::after,
+.main-footer__social-list li a,
+.why-choose-one .why-choose-more--btn::before,
+.why-choose-one .why-choose-more--btn::after,
+.main-header--two .mobile-nav__btn span {
+  background-color: var(--agrofa-black);
+}
+
+.testimonials-two {
+  background-color: #040601;
+}
+
+.testimonials-two--card {
+  background-color: var(--agrofa-black2);
+}
+
+.testimonials-two--card::before {
+  background-image: url("../images/shapes/dark-testimonial-bg2-1.png");
+}
+
+.testimonials-two--card::after {
+  background-image: url("../images/shapes/dark-testimonial-bg2-2.png");
+}
+
+.testimonials-two--card__designation,
+.testimonials-two--card__content {
+  color: #505f56;
+}
+
+.agrofa-owl__carousel--basic-nav.owl-carousel .owl-dots .owl-dot:hover span,
+.agrofa-owl__carousel--basic-nav.owl-carousel .owl-dots .owl-dot.active span {
+  background-color: transparent;
+  border: 2px solid var(--agrofa-green);
+}
+
+.opening__info-row:hover .opening__info-row__icon {
+  background-color: var(--agrofa-black);
+}
+
+.companies-two {
+  background-color: #000e05;
+  background-blend-mode: overlay;
+  background-image: url("../images/backgrounds/dark-bg1-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.companies-two__inner-img::after {
+  border-left-color: #1c270d;
+}
+
+.companies-two__carousel {
+  border-bottom-color: #1c270d;
+}
+
+.companies-two__carousel .owl-stage-outer::before {
+  background-color: #02180a;
+}
+
+.companies-two__inner-img img {
+  transition: all 0.5s;
+}
+.companies-two__inner-img:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.main-footer__bg {
+  background-position: center bottom;
+}
+/*# sourceMappingURL=agrofa-dark.css.map */

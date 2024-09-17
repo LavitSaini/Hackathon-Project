@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from bracketweb.com/agrofa-html/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Sep 2024 12:02:13 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+    <meta name="description" content="Sollox is a modern HTML Template for Beauty, Spa Centers, Hair, Nail, Spa Salons & Cosmetic shops. The template perfectly fits Beauty Spa, Salon, and Wellness Treatments websites and businesses.">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:opsz,wght@8..144,400;8..144,600&amp;display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css">
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css">
+    <link rel="stylesheet" href="assets/vendors/agrofa-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/agrofa.css">
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+
+        <%- include("./partials/header") %>
+
+        <section class="page-header page-header--cartout">
+            <div class="page-header__bg"></div>
+            <!-- /.page-header__bg -->
+            <div class="container">
+                <!-- <img src="assets/images/shapes/page-header-s-1.png" alt="Cart Checkout" class="page-header__shape"> -->
+                <h2 class="page-header__title">Cart Checkout</h2>
+                <ul class="agrofa-breadcrumb list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><span>Cart Checkout</span></li>
+                </ul><!-- /.thm-breadcrumb list-unstyled -->
+            </div><!-- /.container -->
+        </section><!-- /.page-header -->
+        <!-- Checkout Start -->
+        <section class="checkout-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="checkout-page__billing-address">
+                            <h2 class="checkout-page__billing-address__title">Billing details</h2>
+                            <form class="checkout-page__form">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">First name *</label>
+                                            <input type="text" name="first_name" value="" placeholder="First Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Last name *</label>
+                                            <input type="text" name="last_name" value="" placeholder="Last name" required="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Country / Region *</label>
+                                            <select class="selectpicker" aria-label="Default select example">
+                                                <option selected="">London</option>
+                                                <option value="1">Canada</option>
+                                                <option value="2">England</option>
+                                                <option value="3">Australia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Street address *</label>
+                                            <input type="text" name="Street_address" value="" placeholder="Street address">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Town / City *</label>
+                                            <input type="text" name="Town/City" value="" placeholder="Town / City" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">State *</label>
+                                            <select class="selectpicker" aria-label="Default select example">
+                                                <option selected="">Abbey Road</option>
+                                                <option value="1">Dhaka</option>
+                                                <option value="2">Rangpur</option>
+                                                <option value="3">Rajshahi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">ZIP Code *</label>
+                                            <input name="form_zip" type="text" pattern="[0-9]*" placeholder="Zip code">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Phone *</label>
+                                            <input type="tel" name="form_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Email address *</label>
+                                            <input name="email" type="email" placeholder="Email address">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__check-box">
+                                            <input type="checkbox" name="skipper4" id="skipper4" checked="">
+                                            <label for="skipper4">Ship to a different address?<span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__check-box">
+                                            <input type="checkbox" name="skipper5" id="skipper5">
+                                            <label for="skipper5">Create an account?<span></span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <label class="checkout-page__label-text">Order notes (optional)</label>
+                                            <textarea placeholder="Note about your order" name="form_order_notes"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="checkout-page__cost-process">
+                            <div class="cart-process-wrap">
+                                <h2 class="checkout-page__cost-process-title">Order summary</h2>
+
+                                <div class="cart-page__carttotals-cost cart-page__common d-flex align-items-center justify-content-between">
+                                    <div class="cart-page__quantity cart-page__title-name product--name d-flex align-items-center">
+                                        <div class="cart-page__table__meta-img">
+                                            <img src="assets/images/products/product-1-2.png" alt="agrofa">
+                                        </div>
+                                        <h3 class="cart-page__table__meta-title"><a href="product-details.html">Wood
+                                                Chair </a></h3>
+                                    </div>
+                                    <strong class="cart-page__cartprice">$300.00</strong>
+                                </div>
+
+                                <div class="cart-page__carttotals-cost cart-page__common d-flex align-items-center justify-content-between">
+                                    <strong class="cart-page__cartname">Cart Total</strong>
+                                    <strong class="cart-page__cartprice">$300.00</strong>
+                                </div>
+
+                                <div class="cart-page__subtotals-cost cart-page__common d-flex align-items-center justify-content-between">
+                                    <strong class="cart-page__cartname">SubTotal</strong>
+                                    <strong class="cart-page__cartprice">$300.00</strong>
+                                </div>
+
+                                <div class="cart-page__shipping-area cart-page__common d-flex align-items-center justify-content-between">
+                                    <strong class="cart-page__cartname">Shipping</strong>
+                                    <div class="cart-page__flat-rate">
+                                        <span>Flat rate: $20.00</span>
+                                        <small>Shipping to UAS</small>
+                                        <a href="#" class="change-address">Change address</a>
+                                    </div>
+                                </div>
+
+                                <div class="cart-page__intotals cart-page__common d-flex align-items-center justify-content-between">
+                                    <strong class="cart-page__cartname">Total</strong>
+                                    <strong class="cart-page__cartprice">$320.00</strong>
+                                </div>
+                            </div>
+
+                            <div class="cart-process-wrap checkout-page__payment">
+                                <h2 class="checkout-page__cost-process-title">Payment information</h2>
+
+                                <div class="checkout-page__payment__select-wrap">
+                                    <div class="checkout-page__payment__select">
+                                        <input type="checkbox" name="skipper1" id="skipper1" checked="">
+                                        <label for="skipper1"><span></span>Ship to a different address</label>
+                                    </div>
+                                    <div class="checkout-page__payment__select">
+                                        <input type="checkbox" name="skipper2" id="skipper2" checked="">
+                                        <label for="skipper2"><span></span>Ship to a different address</label>
+                                    </div>
+                                    <div class="checkout-page__payment__select">
+                                        <input type="checkbox" name="skipper3" id="skipper3" checked="">
+                                        <label for="skipper3"><span></span>Ship to a different address</label>
+                                    </div>
+                                </div>
+
+                                <div class="row payment_condition-check">
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__check-box">
+                                            <input type="checkbox" name="payment4" id="payment4">
+                                            <label for="payment4">I have read and agree to the website terms and conditions *<span></span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="place-oder-btn-wrap">
+                                    <a href="checkout.html" class="place-oder-btn agrofa-btn">Place order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Checkout End -->
+
+        <%- include("./partials/footer") %>
+
+    </div><!-- /.page-wrapper -->
+
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="/" aria-label="logo image"><img src="assets/images/logo-light.png" width="155" alt=""></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+
+    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <!-- template js -->
+    <script src="assets/js/agrofa.js"></script>
+</body>
+
+
+<!-- Mirrored from bracketweb.com/agrofa-html/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Sep 2024 12:02:13 GMT -->
+</html>
