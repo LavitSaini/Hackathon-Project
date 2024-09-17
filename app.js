@@ -8,6 +8,8 @@ dotenv.config();
 
 // Import Routes
 const indexRouter = require("./routes/index");
+const productsRouter = require("./routes/products");
+const cartRouter = require("./routes/cart");
 
 // Accessing .env Variables
 const PORT = process.env.PORT || 3000;
@@ -32,6 +34,8 @@ app.use(express.static(__dirname + '/public'));
 
 // Routes Middlewares
 app.use('/', indexRouter);
+app.use("/products", productsRouter);
+app.use("/cart", cartRouter);
 
 // Error Handling Middleware
 

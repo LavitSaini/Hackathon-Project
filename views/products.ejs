@@ -74,272 +74,37 @@
                     <div class="col-lg-12">
 
                         <div class="row gutter-y-30">
+                           <% products.forEach(product => { %>
                             <div class="col-md-6 col-lg-4">
                                 <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                                     <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-1.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
+                                        <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                                        <% if (product.sale) { %>
+                                            <div class="product__item__btn-sale">Sale</div>
+                                        <% } %>
+                                    </div>
 
                                     <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
+                                        <a href="/products/<%= product._id %>/add" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
                                         <div class="product__item__wrap">
                                             <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Furniture Wood</a></h4><!-- /.product-title -->
+                                                <h4 class="product__item__title"><a href="/products/<%= product._id %>/add"><%= product.title %></a></h4><!-- /.product-title -->
                                                 <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$80.00</span>
-                                                    <span class="product__item__offer-price"></span>
+                                                    <span class="product__item__regular-price"><%= product.price %></span>
+                                                    <span class="product__item__offer-price"><%= product.discountPrice %></span>
                                                 </div><!-- /.product-price -->
                                             </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
                                         </div>
                                     </div><!-- /.product-content -->
                                 </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-2.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Charir Colorful</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$200.00</span>
-                                                    <span class="product__item__offer-price">$250.00</span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-3.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Wood Chair</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$47.00</span>
-                                                    <span class="product__item__offer-price"></span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-4.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Watch</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$80.00</span>
-                                                    <span class="product__item__offer-price"></span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='400ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-5.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Minimal</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$200.00</span>
-                                                    <span class="product__item__offer-price">$250.00</span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-6.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Office Chair</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$47.00</span>
-                                                    <span class="product__item__offer-price"></span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='600ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-7.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Minimal Chair</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$70.00</span>
-                                                    <span class="product__item__offer-price"></span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='700ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-8.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Yellow Chair</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$150.00</span>
-                                                    <span class="product__item__offer-price">$100.00</span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='800ms'>
-                                    <div class="product__item__img">
-                                        <img src="assets/images/products/product-1-9.png" alt="nisoz">
-                                        <div class="product__item__btn-sale">Sale</div>
-                                    </div><!-- /.product-image -->
-
-                                    <div class="product__item__content">
-                                        <a href="/cart" class="agrofa-btn product__item__link"><span>Buy Now</span></a>
-                                        <div class="product__item__wrap">
-                                            <div class="product__item__price-title">
-                                                <h4 class="product__item__title"><a href="product-details.html">Headphone</a></h4><!-- /.product-title -->
-                                                <div class="product__item__price">
-                                                    <span class="product__item__regular-price">$60.00</span>
-                                                    <span class="product__item__offer-price"></span>
-                                                </div><!-- /.product-price -->
-                                            </div>
-
-                                            <div class="product__item__ratings">
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                            </div><!-- /.product-ratings -->
-                                        </div>
-                                    </div><!-- /.product-content -->
-                                </div><!-- /.product-item -->
-                            </div><!-- /.col-md-6 col-lg-4 -->
+                            </div><!-- /.col-md-6 col-lg-4 --> 
+                           <% }) %>
                         </div><!-- /.row -->
                     </div><!-- /.col-lg-9 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.product-one product-one--page -->
+
 
         <%- include("./partials/footer") %>
 

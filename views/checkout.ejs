@@ -40,6 +40,15 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/agrofa.css">
+    <style>
+        .cart-items{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -190,39 +199,40 @@
                             <div class="cart-process-wrap">
                                 <h2 class="checkout-page__cost-process-title">Order summary</h2>
 
-                                <div class="cart-page__carttotals-cost cart-page__common d-flex align-items-center justify-content-between">
-                                    <div class="cart-page__quantity cart-page__title-name product--name d-flex align-items-center">
-                                        <div class="cart-page__table__meta-img">
-                                            <img src="assets/images/products/product-1-2.png" alt="agrofa">
-                                        </div>
-                                        <h3 class="cart-page__table__meta-title"><a href="product-details.html">Wood
-                                                Chair </a></h3>
-                                    </div>
-                                    <strong class="cart-page__cartprice">$300.00</strong>
-                                </div>
+                                <ul class="cart-items">
+                                    <% cartItems.forEach(item => { %>
+                                        <li class="cart-page__carttotals-cost cart-page__common d-flex align-items-center justify-content-between">
+                                            <div class="cart-page__quantity cart-page__title-name product--name d-flex align-items-center">
+                                                <div class="cart-page__table__meta-img">
+                                                    <img src="<%= item.productId.imageUrl %>" alt="<%= item.productId.title %>">
+                                                </div>
+                                                <h3 class="cart-page__table__meta-title"><a href="product-details.html"><%= item.productId.title %></a></h3>
+                                            </div>
+                                            <strong class="cart-page__cartprice">
+                                                <% if(item.productId.discountPrice != 0){ %>
+                                                    $<%= (item.productId.discountPrice * item.quantity).toFixed(2) %>
+                                                <% } else { %>
+                                                    $<%= (item.productId.price * item.quantity).toFixed(2) %>
+                                                <% } %>
+                                            </strong>
+                                        </li>
+                                    <% }) %>
+                                </ul>
+                                
 
                                 <div class="cart-page__carttotals-cost cart-page__common d-flex align-items-center justify-content-between">
                                     <strong class="cart-page__cartname">Cart Total</strong>
-                                    <strong class="cart-page__cartprice">$300.00</strong>
+                                    <strong class="cart-page__cartprice">$<%= total %></strong>
                                 </div>
 
                                 <div class="cart-page__subtotals-cost cart-page__common d-flex align-items-center justify-content-between">
                                     <strong class="cart-page__cartname">SubTotal</strong>
-                                    <strong class="cart-page__cartprice">$300.00</strong>
-                                </div>
-
-                                <div class="cart-page__shipping-area cart-page__common d-flex align-items-center justify-content-between">
-                                    <strong class="cart-page__cartname">Shipping</strong>
-                                    <div class="cart-page__flat-rate">
-                                        <span>Flat rate: $20.00</span>
-                                        <small>Shipping to UAS</small>
-                                        <a href="#" class="change-address">Change address</a>
-                                    </div>
+                                    <strong class="cart-page__cartprice">$<%= total %></strong>
                                 </div>
 
                                 <div class="cart-page__intotals cart-page__common d-flex align-items-center justify-content-between">
                                     <strong class="cart-page__cartname">Total</strong>
-                                    <strong class="cart-page__cartprice">$320.00</strong>
+                                    <strong class="cart-page__cartprice">$<%= total %></strong>
                                 </div>
                             </div>
 
@@ -254,7 +264,7 @@
                                 </div>
 
                                 <div class="place-oder-btn-wrap">
-                                    <a href="checkout.html" class="place-oder-btn agrofa-btn">Place order</a>
+                                    <a  class="place-oder-btn agrofa-btn">Place order</a>
                                 </div>
                             </div>
                         </div>

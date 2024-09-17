@@ -78,51 +78,57 @@
                                 <strong class="cart-page__title-name product--name">Product</strong>
                                 <strong class="cart-page__title-name quantity-count">Quantity</strong>
                                 <strong class="cart-page__title-name price--amount">Price</strong>
-                                <strong class="cart-page__title-name subtotla-amount">Subtotal</strong>
-                            </div>
-                            <div class="cart-page__products-row d-flex flex-wrap  align-items-center">
-                                <div class="cart-page__quantity cart-page__title-name product--name d-flex align-items-center">
-                                    <div class="cart-page__table__meta-img">
-                                        <img src="assets/images/products/product-1-2.png" alt="agrofa">
-
-                                        <div class="cart-page__remove-item icon-plus"></div>
-                                    </div>
-                                    <h3 class="cart-page__table__meta-title"><a href="product-details.html">Chair</a></h3>
-                                </div>
-
-                                <div class="cart-page__quantity cart-page__title-name quantity-count">
-                                    <div class="quantity-box d-flex align-items-center">
-                                        <button type="button" class="sub"><i class="icon-down-arrow1"></i></button>
-                                        <input type="text" value="1">
-                                        <button type="button" class="add"><i class="icon-up-arrow1"></i></button>
-                                    </div>
-                                </div>
-
-                                <div class="cart-page__quantity cart-page__title-name price--amount">
-                                    <span class="cart-page__price">$300.00</span>
-                                </div>
-
-                                <div class="cart-page__quantity cart-page__title-name subtotla-amount">
-                                    <span class="cart-page__price">$300.00</span>
-                                </div>
                             </div>
 
+                            <% if(cartItems.length) { %>
+                                <% cartItems.forEach((item) => { %>
+                                    <div class="cart-page__products-row d-flex flex-wrap  align-items-center">
+                                        <div class="cart-page__quantity cart-page__title-name product--name d-flex align-items-center">
+                                            <div class="cart-page__table__meta-img">
+                                                <img src="<%= item.productId.imageUrl %>" alt="<%= item.productId.title %>">
+        
+                                                <a href="cart/<%= item._id %>/remove" class="cart-page__remove-item icon-plus"></a>
+                                            </div>
+                                            <h3 class="cart-page__table__meta-title"><a href="/product"><%= item.productId.title %></a></h3>
+                                        </div>
+        
+                                        <div class="cart-page__quantity cart-page__title-name quantity-count">
+                                            <div class="quantity-box d-flex align-items-center">
+                                                    <a href="cart/<%= item._id %>/<%= item.quantity %>/decrease" class="sub"><i class="icon-down-arrow1"></i></a>
+                                                <input type="text" value="<%= item.quantity %>">
+                                                    <a href="cart/<%= item._id %>/<%= item.quantity %>/increase" class="add"><i class="icon-up-arrow1"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="cart-page__quantity cart-page__title-name price--amount">
+                                            <span class="cart-page__price">
+                                                <% if(item.productId.discountPrice != 0){ %>
+                                                    $<%= (item.productId.discountPrice * item.quantity).toFixed(2) %>
+                                                <% } else { %>
+                                                    $<%= (item.productId.price * item.quantity).toFixed(2) %>
+                                                <% } %>
+                                            </span>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            <% } else {  %>
+                                <h3 class="empty-cart">Empty Cart!</h3>
+                            <% } %>
                         </div>
                     </div>
 
                     <div class="cart-process-wrap">
                         <div class="cart-page__carttotals-cost cart-page__common d-flex align-items-center justify-content-between">
                             <strong class="cart-page__cartname">Cart Total</strong>
-                            <strong class="cart-page__cartprice">$300.00</strong>
+                            <strong class="cart-page__cartprice">$<%= total %></strong>
                         </div>
                         <div class="cart-page__subtotals-cost cart-page__common d-flex align-items-center justify-content-between">
                             <strong class="cart-page__cartname">SubTotal</strong>
-                            <strong class="cart-page__cartprice">$300.00</strong>
+                            <strong class="cart-page__cartprice">$<%= total %></strong>
                         </div>
-                        
                         <div class="cart-page__intotals cart-page__common d-flex align-items-center justify-content-between">
                             <strong class="cart-page__cartname">Total</strong>
-                            <strong class="cart-page__cartprice">$320.00</strong>
+                            <strong class="cart-page__cartprice">$<%= total %></strong>
                         </div>
                         <div class="proceed-btn-wrap">
                             <a href="/checkout" class="proceed-btn agrofa-btn">Proceed to checkout</a>
