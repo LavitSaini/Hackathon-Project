@@ -40,7 +40,7 @@ router.get("/cart", async (req, res, next) => {
         acc += cv.productId.price * cv.quantity;
       }
       return acc;
-    }, 0);
+    }, 0).toFixed(2);
     return res.render("cart", { cartItems, total });
   } catch (error) {
     next(error);
@@ -57,7 +57,7 @@ router.get("/checkout", async (req, res, next) => {
         acc += cv.productId.price * cv.quantity;
       }
       return acc;
-    }, 0);
+    }, 0).toFixed(2);
     return res.render("checkout", { cartItems, total });
   } catch (error) {
     next(error);
